@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavBar from '../components/NavBar.astro';
+import JobSearchBar from '../components/JobSearchBar/JobSearchBar.astro';
+import MarketingForm from '../components/MarketingForm.astro';
+import BecomeTheFace from '../components/BecomeTheFace.astro';
+import JobsNearYou from '../components/JobsNearYou.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<NavBar />
+		<JobSearchBar />
+		<div class="flex flex-col gap-8 p-8">
+			<div class="flex flex-col md:flex-row gap-8">
+				<BecomeTheFace />
+				<JobsNearYou />
+			</div>
+			<MarketingForm />
+		</div>
+	</main>
+	<Footer />
+</Layout>

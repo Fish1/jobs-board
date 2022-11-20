@@ -1,0 +1,68 @@
+---
+import { Picture } from '@astrojs/image/components';
+import talent from "../assets/image1.jpg";
+---
+
+<div class="card card-side bg-base-100 shadow-xl overflow-hidden">
+  <div class="card-body">
+    <h3 class="card-title">Stay Up To Date With ADT Job Alerts</h3>
+    <p>Quickly join with your social network.</p>
+    <p>We accept files under 2MB with the following extensions: .rft, .doc, .docx, .txt, .pdf.</p>
+    <form class="flex flex-col gap-5">
+
+      <div class="flex gap-2">
+        <input type="text" class="input input-bordered grow" placeholder="First Name" />
+        <input type="text" class="input input-bordered grow" placeholder="Last Name" />
+      </div>
+
+      <input type="text" class="input input-bordered w-full" placeholder="User Name / Email" />
+
+      <div class="flex gap-2">
+        <input type="text" class="input input-bordered grow" placeholder="Zip" />
+        <input type="text" class="input input-bordered grow" placeholder="Area of Interest" />
+      </div>
+
+      <div class="flex gap-2">
+        <input type="text" class="input input-bordered grow" placeholder="Cell / Mobile" />
+        <input type="text" class="input input-bordered grow" placeholder="Current / Last Job Title" />
+      </div>
+
+      <div class="form-control">
+        <label class="label cursor-pointer flex gap-5">
+          <span class="label-text">
+            By submitting your information, you acknowledge that you have read our privacy policy  and consent to receive email and SMS communication from ADT.*
+          </span>
+          <input type="checkbox" checked="checked" class="checkbox" />
+        </label>
+      </div>
+      
+      <div class="form-control">
+        <label class="label cursor-pointer flex gap-5">
+          <span class="label-text">
+            I would like to be contacted with marketing and job alerts from ADT. I know I can unsubscribe at any time.*
+          </span>
+          <input type="checkbox" checked="checked" class="checkbox" />
+        </label>
+      </div>
+
+      <div class="flex sm:flex-col md:flex-row gap-3">
+        <input type="button" class="btn btn-secondary grow" value="Upload Resume" />
+        <input type="button" class="btn btn-primary grow" value="Submit" />
+      </div>
+    </form>
+  </div>
+  <figure class="object-contain">
+    <div class="w-full h-full">
+      <Picture
+        src={talent}
+        widths={[500]}
+        aspectRatio="4:8"
+        sizes="300px"
+        fit="cover"
+        formats={["jpeg"]}
+        alt="stop sign"
+        class="h-full object-cover hidden md:inline"
+      />
+    </div>
+  </figure>
+</div>

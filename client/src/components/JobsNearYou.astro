@@ -1,0 +1,33 @@
+---
+import { Picture } from '@astrojs/image/components';
+import image2 from '../assets/image2.jpg';
+---
+
+<div class="card w-full bg-base-100 shadow-xl image-full">
+  <figure class="object-contain max-h-96">
+    <div class="w-full h-full">
+      <Picture
+        src={image2}
+        widths={[50, 1200]}
+        aspectRatio={"16:9"}
+        sizes="900px"
+        fit="cover"
+        formats={["jpeg"]}
+        alt="A beautiful landscape"
+        class="w-full"
+      />
+    </div>
+  </figure>
+  <div class="card-body flex gap-8">
+    <h3 class="card-title">Jobs Near You</h3>
+    <div class="grid grid-cols-2 gap-3">
+      <button class="btn glass">Fire Alarm Designer</button>
+      <button class="btn glass">Business Sales Representative</button>
+      <button class="btn glass">Financial Planner</button>
+      <button class="btn glass">Software Engineer</button>
+    </div>
+    <div class="card-actions justify-center">
+      <button class="btn glass">View All Job Openings</button>
+    </div>
+  </div>
+</div>

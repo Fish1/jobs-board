@@ -1,0 +1,14 @@
+---
+import { Picture } from '@astrojs/image/components';
+import logo from '../assets/logo.png';
+---
+<div class="navbar bg-base-100 flex gap-2">
+  <Picture src={logo} widths={[50]} aspectRatio="1:1" sizes="(max-width: 50px), 50px" alt="test"/>
+  <div class="divider-horizontal grow"></div>
+  <a class="btn btn-ghost">Working at ADT</a>
+  <a class="btn btn-ghost">Career Areas</a>
+  <a class="btn btn-ghost">Diversity & Inclusion</a>
+  <a class="btn btn-ghost">Events</a>
+  <a class="btn btn-ghost">Similar Jobs</a>
+  <a class="btn btn-ghost">Saved Jobs</a>
+</div>

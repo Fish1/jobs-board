@@ -1,0 +1,11 @@
+---
+import InputField from "./InputField.astro";
+---
+
+<div class="navbar flex gap-2 bg-secondary">
+  <h1 class="text-xl font-semibold text-white p-2 grow">Search Jobs</h1>
+  <InputField text="Keyword" />
+  <InputField text="Location" />
+  <InputField text="Radius" />
+  <input type="button" class="btn btn-primary" value="search">
+</div>
